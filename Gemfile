@@ -29,6 +29,7 @@ gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
+gem 'haml'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
@@ -77,3 +78,5 @@ end
 # Needed to use my own fork so I could bump the version of multi-json and hashie
 gem 'desk', :git => 'https://github.com/fotioslindiakos/desk.git'
 gem 'omniauth-desk', :git => 'https://github.com/fotioslindiakos/omniauth-desk.git'
+gem 'haml'
+gem 'foundation-rails'
