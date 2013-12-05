@@ -67,3 +67,6 @@ group :test do
   gem "rspec-rails"
   gem "cucumber-rails"
 end
+
+# Needed to use my own so I could bump the version of multi-json
+gem 'omniauth-desk', :git => 'https://github.com/fotioslindiakos/omniauth-desk.git'

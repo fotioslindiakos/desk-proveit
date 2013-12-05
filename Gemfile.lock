@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/fotioslindiakos/omniauth-desk.git
+  revision: ed788f5420d700441c9635dd9efe19a1149f506d
+  specs:
+    omniauth-desk (0.1.5)
+      multi_json
+      omniauth (~> 1.0)
+      omniauth-oauth (~> 1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -77,6 +86,7 @@ GEM
     guard-rspec (4.2.0)
       guard (>= 2.1.1)
       rspec (>= 2.14, < 4.0)
+    hashie (2.0.5)
     hike (1.2.3)
     i18n (0.6.9)
     jbuilder (1.5.3)
@@ -104,6 +114,13 @@ GEM
     multi_test (0.0.2)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
+    oauth (0.4.7)
+    omniauth (1.1.4)
+      hashie (>= 1.2, < 3)
+      rack
+    omniauth-oauth (1.0.1)
+      oauth
+      omniauth (~> 1.0)
     pg (0.17.0)
     polyglot (0.3.3)
     pry (0.9.12.4)
@@ -208,6 +225,7 @@ DEPENDENCIES
   guard-rspec
   jbuilder (~> 1.2)
   jquery-rails
+  omniauth-desk!
   pg
   rails (= 4.0.2)
   rb-fchange
