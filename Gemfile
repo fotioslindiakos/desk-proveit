@@ -22,7 +22,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -49,3 +49,21 @@ gem 'unicorn'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Zeus and guard testing from: http://www.ksylvest.com/posts/2012-03-09/faster-testing-in-rails-with-guard-for-zeus-rspec-and-cucumber
+group :development do
+  gem "zeus"
+  gem "guard"
+  gem "guard-bundler"
+  gem "guard-cucumber"
+  gem "guard-rspec"
+  #gem "guard-zeus"
+  gem "rb-inotify", require: false
+  gem "rb-fsevent", require: false
+  gem "rb-fchange", require: false
+end
+
+group :test do
+  gem "rspec-rails"
+  gem "cucumber-rails"
+end
