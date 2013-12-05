@@ -68,5 +68,12 @@ group :test do
   gem "cucumber-rails"
 end
 
-# Needed to use my own so I could bump the version of multi-json
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request'
+end
+
+# Needed to use my own fork so I could bump the version of multi-json and hashie
+gem 'desk', :git => 'https://github.com/fotioslindiakos/desk.git'
 gem 'omniauth-desk', :git => 'https://github.com/fotioslindiakos/omniauth-desk.git'
