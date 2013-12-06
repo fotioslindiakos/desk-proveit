@@ -4,11 +4,34 @@
   %title= content_for?(:title) ? yield(:title) : "foundation-rails"
   = stylesheet_link_tag    "application"
   = javascript_include_tag "vendor/modernizr"
+  = stylesheet_link_tag    'sessions'
   = csrf_meta_tags
 
-.row#center
-  .large-6.large-centered.columns.text-center
-    %p.panel
-      = link_to "Sign In", "/auth/desk", class: :button
+.row
+  .large-12.large-centered.columns.text-center
+    %h1
+      expect(
+      = link_to image_tag("http://www.gravatar.com/avatar/9fa7626f6167c016e4eed051f129450d.png?s=100", class: :th), 'http://www.linkedin.com/in/thefotios/'
+      ).to be(
+      - scale=0.25
+      =image_tag("awesome.jpg", width: 1024*scale, height: 227*scale)
+      )
 
-= javascript_include_tag "application"
+%hr
+.row
+  .large-12.large-centered.columns.text-center
+    = link_to "Sign In", "/auth/desk", class: [:button, :radius]
+
+/
+  %span
+    - scale=0.5
+    = link_to image_tag('http://www.desk.com/resources/_v3/images/salesforce-desk-footer.png', height: 400*scale, width: 600*scale), 'http://desk.com'
+  %span
+    = image_tag("http://www.iconsdb.com/icons/download/black/plus-128.png")
+  %span
+    = image_tag("http://www.gravatar.com/avatar/9fa7626f6167c016e4eed051f129450d.png?s=200")
+  %span
+    = image_tag('http://www.iconsdb.com/icons/download/black/equal-sign-2-128.png')
+  %span
+    - scale=0.3
+    =image_tag("http://hizkidz.files.wordpress.com/2012/01/awesome_logo_colour.jpg", width: 1024*scale, height: 227*scale)
