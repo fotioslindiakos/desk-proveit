@@ -28,7 +28,6 @@ module DeskWrapper
     end
 
     def post(path, options)
-      binding.pry
       response = @client.post(path, options)
     end
 
