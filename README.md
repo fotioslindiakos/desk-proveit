@@ -1,3 +1,5 @@
+[ ![Codeship Status for fotioslindiakos/desk-proveit](https://www.codeship.io/projects/61a5f130-40bd-0131-177a-7a95864a21a3/status?branch=master)](https://www.codeship.io/projects/10554)
+
 == README
 
 This README would normally document whatever steps are necessary to get the
