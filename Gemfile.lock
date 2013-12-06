@@ -7,19 +7,6 @@ GIT
       omniauth (~> 1.0)
       omniauth-oauth (~> 1.0)
 
-PATH
-  remote: /home/fotios/projects/forks/desk
-  specs:
-    desk (0.3.5)
-      faraday (~> 0.8.0)
-      faraday_middleware (~> 0.9.0)
-      hashie
-      multi_json (~> 1.6)
-      multi_xml (~> 0.5)
-      pony (~> 1.1)
-      rash (~> 0.3.1)
-      simple_oauth (~> 0.2.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -154,7 +141,6 @@ GEM
     minitest (4.7.5)
     multi_json (1.8.2)
     multi_test (0.0.2)
-    multi_xml (0.5.5)
     multipart-post (1.2.0)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
@@ -167,8 +153,6 @@ GEM
       omniauth (~> 1.0)
     pg (0.17.0)
     polyglot (0.3.3)
-    pony (1.6.2)
-      mail (>= 2.0)
     pry (0.9.12.4)
       coderay (~> 1.0)
       method_source (~> 0.8)
@@ -198,8 +182,6 @@ GEM
       thor (>= 0.18.1, < 2.0)
     raindrops (0.12.0)
     rake (10.1.0)
-    rash (0.3.2)
-      hashie (~> 1.2.0)
     rb-fchange (0.0.6)
       ffi
     rb-fsevent (0.9.3)
@@ -277,7 +259,6 @@ DEPENDENCIES
   binding_of_caller
   coffee-rails (~> 4.0.0)
   cucumber-rails
-  desk!
   faraday
   faraday-http-cache
   faraday_middleware
@@ -301,6 +282,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 4.0.0)
   sdoc
+  simple_oauth
   sqlite3
   therubyracer
   turbolinks

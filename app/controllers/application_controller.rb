@@ -19,8 +19,6 @@ class ApplicationController < ActionController::Base
   def desk
     opts = {token: session[:oauth_token], token_secret: session[:oauth_secret]}
     @desk ||= DeskWrapper::Client.new(opts)
-    #opts = {oauth_token: session[:oauth_token], oauth_token_secret: session[:oauth_secret]}
-    #@desk = Desk.client(opts)
   end
 
   def require_login
