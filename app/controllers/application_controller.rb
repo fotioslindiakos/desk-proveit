@@ -5,7 +5,6 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
   helper_method :desk
 
-  private
   def current_user
     @current_user ||= (
       begin
