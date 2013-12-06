@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131206154502) do
+ActiveRecord::Schema.define(version: 20131205180217) do
 
   create_table "users", force: true do |t|
     t.string   "provider"
-    t.integer  "uid",        limit: 255
+    t.integer  "uid"
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
