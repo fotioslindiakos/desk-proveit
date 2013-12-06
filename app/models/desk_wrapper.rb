@@ -28,11 +28,11 @@ module DeskWrapper
     end
 
     def post(path, options)
-      response = @client.post(path, options)
+      response = client.post(path, options)
     end
 
     def get(endpoint)
-      response = @client.get(endpoint)
+      response = client.get(endpoint)
       entries = response.body['_embedded']['entries']
       entries.sort_by{|x| x['position'] }
     end

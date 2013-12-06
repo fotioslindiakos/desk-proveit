@@ -55,3 +55,15 @@ end
 def let_doubles(*args)
   args.each{|x| let_double(x) }
 end
+
+def stub_api_consts
+  stub_const("DeskWrapper::API_KEY", api_key)
+  stub_const("DeskWrapper::API_SITE", api_site)
+  stub_const("DeskWrapper::API_SECRET", api_secret)
+end
+
+RSpec::Matchers.define :have_constant do |const|
+  match do |owner|
+    owner.const_defined?(const)
+  end
+end
