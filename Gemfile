@@ -80,7 +80,7 @@ end
 # Needed to use my own fork so I could bump the version of multi-json and hashie
 #gem 'desk', :git => 'https://github.com/fotioslindiakos/desk.git'
 #gem 'desk', :path => '/home/fotios/projects/forks/desk'
-gem 'omniauth-desk', :git => 'https://github.com/fotioslindiakos/omniauth-desk.git'
+gem 'omniauth-desk'#, :git => 'https://github.com/fotioslindiakos/omniauth-desk.git'
 gem 'simple_oauth'
 gem 'haml'
 gem 'haml-rails'
