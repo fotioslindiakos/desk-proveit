@@ -1,6 +1,8 @@
 class HomeController < ApplicationController
   def index
-    #desk
-    raise
+    @user = current_user
+    @cases = desk.cases
+    @filters = desk.filters
+    @labels = desk.labels
   end
 end

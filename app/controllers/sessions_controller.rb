@@ -17,6 +17,6 @@ class SessionsController < ApplicationController
   end
 
   def login
-
+    render layout: false
   end
 end

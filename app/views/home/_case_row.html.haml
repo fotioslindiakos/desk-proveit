@@ -1,0 +1,5 @@
+/
+  = c.to_yaml
+%tr
+  %td= c['subject']
+  %td= render partial: "labels", collection: c['labels'], as: 'label_text'

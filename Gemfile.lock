@@ -1,8 +1,16 @@
 GIT
-  remote: https://github.com/fotioslindiakos/desk.git
-  revision: c73972e0632db062c78897cbce2eaf1e577fc6be
+  remote: https://github.com/fotioslindiakos/omniauth-desk.git
+  revision: ed788f5420d700441c9635dd9efe19a1149f506d
   specs:
-    desk (0.3.4)
+    omniauth-desk (0.1.5)
+      multi_json
+      omniauth (~> 1.0)
+      omniauth-oauth (~> 1.0)
+
+PATH
+  remote: /home/fotios/projects/forks/desk
+  specs:
+    desk (0.3.5)
       faraday (~> 0.8.0)
       faraday_middleware (~> 0.9.0)
       hashie
@@ -11,15 +19,6 @@ GIT
       pony (~> 1.1)
       rash (~> 0.3.1)
       simple_oauth (~> 0.2.0)
-
-GIT
-  remote: https://github.com/fotioslindiakos/omniauth-desk.git
-  revision: ed788f5420d700441c9635dd9efe19a1149f506d
-  specs:
-    omniauth-desk (0.1.5)
-      multi_json
-      omniauth (~> 1.0)
-      omniauth-oauth (~> 1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -116,6 +115,11 @@ GEM
       rspec (>= 2.14, < 4.0)
     haml (4.0.4)
       tilt
+    haml-rails (0.5.1)
+      actionpack (~> 4.0.0)
+      activesupport (~> 4.0.0)
+      haml (>= 3.1, < 5.0)
+      railties (~> 4.0.0)
     hashie (1.2.0)
     hike (1.2.3)
     i18n (0.6.9)
@@ -265,12 +269,15 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   cucumber-rails
   desk!
+  faraday
+  faraday_middleware
   foundation-rails
   guard
   guard-bundler
   guard-cucumber
   guard-rspec
   haml
+  haml-rails
   jbuilder (~> 1.2)
   jquery-rails
   meta_request

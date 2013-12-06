@@ -1,7 +1,5 @@
 class ApplicationController < ActionController::Base
   before_action :require_login
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
   helper_method :current_user
@@ -9,15 +7,24 @@ class ApplicationController < ActionController::Base
 
   private
   def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    @current_user ||= (
+      begin
+        User.find(session[:user_id]) if session[:user_id]
+      rescue ActiveRecord::RecordNotFound
+        nil
+      end
+    )
   end
 
   def desk
-    @desk ||= Desk.client({oauth_token: session[:oauth_token], oauth_token_secret: session[:oauth_secret]})
+    opts = {token: session[:oauth_token], token_secret: session[:oauth_secret]}
+    @desk ||= DeskWrapper::Client.new(opts)
+    #opts = {oauth_token: session[:oauth_token], oauth_token_secret: session[:oauth_secret]}
+    #@desk = Desk.client(opts)
   end
 
   def require_login
-    unless current_user
+    if current_user.nil?
       redirect_to login_url
     end
   end
