@@ -1,5 +1,5 @@
-API_KEY = 'UXqQdPlvb4aiywFLklgb'
-API_SECRET = 'Uvy1rifO4qP9rPeAx4mHQv0IHTiLbZleCmYuk0SG'
+API_KEY = ENV['API_KEY']
+API_SECRET = ENV['API_SECRET']
 API_SITE = 'https://you-should-hire-fotios.desk.com'
 
 Desk.configure do |config|

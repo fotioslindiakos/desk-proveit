@@ -2,11 +2,15 @@
   .small-2.columns
     %h2 Filters
     %ul.side-nav
-      = render partial: 'filter', collection: @filters
-  .small-8.columns
+      = render partial: 'filter/list', collection: @filters, as: :filter
+  .small-7.columns
     %h2 Cases
-    = render partial: 'cases', locals: {cases: @cases}
-  .small-2.columns
+    - if @cases.empty?
+      No cases found!
+    - else
+      = render partial: 'case/list', locals: {cases: @cases}
+  .small-3.columns
     %h2 Labels
     %ul.side-nav
-      = render partial: 'label_nav', collection: @labels
+      = render partial: 'label/list', collection: @labels, as: :label_nav
+      = render partial: 'label/form'

@@ -1,0 +1,27 @@
+= form_tag({controller: :label, action: :create}, method: 'post', :data => {'abide' => true}) do
+  %fieldset
+    %legend New Label
+    .name-field
+      = label_tag :name, 'Name'
+      = text_field_tag(:name, '', {:required => true})
+    .description-field
+      = label_tag :description, 'Description'
+      = text_area_tag(:description, '', {:required => true})
+    .type-field
+      = label_tag 'Types'
+      %ul{style: 'list-style-type: none'}
+        :ruby
+          checkboxes = {
+            case: 'Case',
+            macro: 'Macro',
+            article: 'Article'
+          }
+        - checkboxes.each do |name,val|
+          %li
+            %input{type: :checkbox, name: 'types[]', value: name}
+            = label_tag name, val
+    .color-field
+      = label_tag :color, 'Color'
+      - colors = %w(default blue white yellow red orange green black purple brown grey pink)
+      = select_tag 'color', options_for_select(colors)
+    = submit_tag('New', class: [:button, :postfix])

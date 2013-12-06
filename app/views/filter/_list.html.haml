@@ -1,0 +1,3 @@
+- filter_id = filter['_links']['cases']['href'].split('/')[-2].to_i
+%li
+  = link_to(filter['name'], filter_path(filter_id))
