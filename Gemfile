@@ -10,6 +10,7 @@ end
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'dotenv'
 end
 
 # Use SCSS for stylesheets
