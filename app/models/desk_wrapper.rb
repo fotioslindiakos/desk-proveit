@@ -51,7 +51,10 @@ module DeskWrapper
         conn.request :json
 
         conn.response :json, :content_type => /\bjson$/
+
         conn.use :instrumentation
+        conn.use :http_cache, store: :memory_store
+
         conn.adapter Faraday.default_adapter
       end
     end

@@ -30,5 +30,4 @@ production:
   encoding: unicode
   database: desk_production
   pool: 5
-  username: desk
   password:
