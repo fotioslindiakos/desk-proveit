@@ -57,8 +57,9 @@ group :development do
   gem "zeus"
   gem "guard"
   gem "guard-bundler"
-  gem "guard-cucumber"
+  #gem "guard-cucumber"
   gem "guard-rspec"
+  gem "guard-migrate"
   #gem "guard-zeus"
   gem "rb-inotify", require: false
   gem "rb-fsevent", require: false
@@ -67,7 +68,7 @@ end
 
 group :test do
   gem "rspec-rails"
-  gem "cucumber-rails"
+  #gem "cucumber-rails"
 end
 
 group :development do
